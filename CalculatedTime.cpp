@@ -106,11 +106,11 @@ void CCalculatedTime::DrawTime(const TVTest::StatusItemDrawInfo *pInfo)
 	Format.Size = sizeof(Format);
 	Format.Flags = TVTest::VAR_STRING_FORMAT_FLAG_NONE;
 	Format.pszFormat =
-		L"%tot-year%/%tot-month2%/%tot-day2%(%tot-day-of-week%) "
-		L"%tot-hour2%:%tot-minute2%:%tot-second2%";
+		L"%tot-year%/%tot-month%/%tot-day%(%tot-day-of-week%) "
+		L"%tot-hour%:%tot-minute2%:%tot-second2%";
 
 	if ((pInfo->Flags & TVTest::STATUS_ITEM_DRAW_FLAG_PREVIEW) != 0) {
-		pszText = L"2026/08/24(月) 12:34:56";
+		pszText = L"2026/8/24(月) 12:34:56";
 	} else if (m_pApp->FormatVarString(&Format)) {
 		pszText = Format.pszResult;
 	}
