@@ -106,7 +106,7 @@ void CCalculatedTime::DrawTime(const TVTest::StatusItemDrawInfo *pInfo)
 	Format.Size = sizeof(Format);
 	Format.Flags = TVTest::VAR_STRING_FORMAT_FLAG_NONE;
 	Format.pszFormat =
-		L"%tot-year%/%tot-month2%/%tot-day2% "
+		L"%tot-year%/%tot-month2%/%tot-day2%(%tot-day-of-week%) "
 		L"%tot-hour2%:%tot-minute2%:%tot-second2%";
 
 	if ((pInfo->Flags & TVTest::STATUS_ITEM_DRAW_FLAG_PREVIEW) != 0) {
