@@ -110,7 +110,7 @@ void CCalculatedTime::DrawTime(const TVTest::StatusItemDrawInfo *pInfo)
 		L"%tot-hour2%:%tot-minute2%:%tot-second2%";
 
 	if ((pInfo->Flags & TVTest::STATUS_ITEM_DRAW_FLAG_PREVIEW) != 0) {
-		pszText = L"2026/08/24 12:34:56";
+		pszText = L"2026/08/24(月) 12:34:56";
 	} else if (m_pApp->FormatVarString(&Format)) {
 		pszText = Format.pszResult;
 	}
