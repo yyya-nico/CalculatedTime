@@ -1,6 +1,6 @@
 # CalculatedTime
 
-TVTest が計算した現在時刻を、ステータスバーに `YYYY/MM/DD HH:MM:SS` 形式で表示するプラグインです。
+TVTest が計算した現在時刻を、ステータスバーに `YYYY/M/D H:MM:SS` 形式で表示するプラグインです。
 
 > [!IMPORTANT]
 > このプラグインは [yyya-nico/TVTest](https://github.com/yyya-nico/TVTest) の `develop` ブランチ向けです。
@@ -11,7 +11,7 @@ TVTest が計算した現在時刻を、ステータスバーに `YYYY/MM/DD HH:
 プラグインは TVTest の次の変数を1秒ごとに展開して表示します。
 
 ```text
-%tot-year%/%tot-month2%/%tot-day2% %tot-hour2%:%tot-minute2%:%tot-second2%
+%tot-year%/%tot-month%/%tot-day%(%tot-day-of-week%) %tot-hour%:%tot-minute2%:%tot-second2%
 ```
 
 `yyya-nico/TVTest` では、表示時刻は次の順で決まります。
@@ -20,7 +20,7 @@ TVTest が計算した現在時刻を、ステータスバーに `YYYY/MM/DD HH:
 2. TOT がなく、SIT の伝送情報ループまたはサービス記述子ループに `partial_transport_stream_time_descriptor` がある場合は、その `JST_time` から得た時刻
 3. どちらも得られない場合は、PC の時刻を基にした EPG 時刻
 
-プラグインは公開 SDK の変数文字列を表示しているため、現在どの時刻源が選ばれているかを判別しません。変数を展開できない場合は `----/--/-- --:--:--` を表示します。
+公開 SDK の変数文字列を表示する仕様上、どの時刻源が選ばれているかは判別できません。変数を展開できない場合は `----/--/-- --:--:--` を表示します。
 
 ## ビルド
 
